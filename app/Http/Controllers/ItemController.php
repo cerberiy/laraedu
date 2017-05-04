@@ -68,7 +68,7 @@ class ItemController extends Controller
      */
     public function edit(item $item)
     {
-        //
+        return view('item.edit', compact('item'));
     }
 
     /**
@@ -80,7 +80,12 @@ class ItemController extends Controller
      */
     public function update(Request $request, item $item)
     {
-        //
+        $item->name = request('name');
+        $item->description = request('description');
+
+        $item->save();
+
+        return redirect('/item/show');
     }
 
     /**

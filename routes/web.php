@@ -25,3 +25,11 @@ Route::get('/item/create', 'ItemController@create');
 Route::post('/item', 'ItemController@store');
 
 Route::get('/item/show', 'ItemController@show');
+
+Route::get('/item/edit/{item}', 'ItemController@edit');
+
+Route::post('/item/update/{item}', 'ItemController@update');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

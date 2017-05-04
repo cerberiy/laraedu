@@ -94,17 +94,12 @@
                         <div class="item_container">
                             <span>Name: {{ $item->name }}</span>
                             <span>Description: {{ $item->description }}</span>
+                            <a href='/item/edit/{{ $item->id }}'>Update</a>
                         </div>
                     @endforeach
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="/item/create">Add new item</a>
-                    <a href="/item/show">Show all items</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+               @include('menu')
             </div>
         </div>
     </body>
